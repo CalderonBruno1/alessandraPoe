@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="index.css" />
+  <title>Una historia para ti...</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=IM+Fell+English+SC&family=Great+Vibes&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <div class="flipbook">
+    <!-- Tapa / Portada -->
+    <div class="hard">Prólogo <small>~ Nuestra Historia</small></div>
+    
+    <!-- Contraportada interna -->
+    <div class="hard"></div>
+
+    <!-- Página 1 -->
+    <div class="page">
+      <h2>Prólogo</h2>
+      <p>Dos páginas en blanco que el destino decidió cruzar entre la tinta y la noche...</p>
+      <p class="texto-romantico">"El comienzo de nuestra historia"</p>
+      <div style="font-size: 30px;">✒️</div>
+    </div>
+
+    <!-- Página 2 (Foto) -->
+    <div class="page">
+      <h2>Capítulo I</h2>
+      <img src="https://picsum.photos/300/200" alt="Recuerdo" class="foto-poe" />
+      <p class="texto-romantico">Entre momentos inolvidables...</p>
+      <small>Cada instante a tu lado se convirtió en mi capítulo favorito.</small>
+    </div>
+
+    <!-- Página 3 (La gran pregunta) -->
+    <div class="page">
+      <h2>El Desenlace</h2>
+      <p class="texto-romantico">¿Quieres ser la protagonista de mi historia?</p>
+      <p><b>¿Quieres estar conmigo?</b></p>
+      <div class="botones-pregunta">
+        <button class="btn-sello" onclick="aceptar()">Sí, quiero</button>
+        <button class="btn-sello" id="btn-no" onmouseover="moverNo()" onclick="moverNo()">No</button>
+      </div>
+    </div>
+
+    <!-- Página 4 (Celebración) -->
+    <div class="page" id="pagina-final">
+      <h2>Fin del Capítulo</h2>
+      <div style="font-size: 40px; margin-bottom: 5px;">🌹</div>
+      <p class="texto-romantico">¡Nuestra historia apenas comienza!</p>
+      <small>Gracias por decir que sí. Me haces muy feliz.</small>
+    </div>
+
+    <!-- Contraportada final interna -->
+    <div class="hard"></div>
+    
+    <!-- Contraportada final externa -->
+    <div class="hard">Fin <small>~ Te amo ❤️</small></div>
+  </div>
+
+  <!-- Scripts esenciales de Turn.js -->
+  <script src="jquery.js"></script>
+  <script src="turn.js"></script>
+    <script src="index.js"></script>
+
+</body>
+
+</html>
