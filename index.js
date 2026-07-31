@@ -1,6 +1,6 @@
 $(".flipbook").turn({
-      width: 900,
-      height: 550,
+      width: 1200,
+      height: 720,
       autoCenter: true,
       gradients: true,
       elevation: 50
