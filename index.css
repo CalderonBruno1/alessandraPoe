@@ -96,16 +96,20 @@ body::before {
   background-color: #f4ebd0;
   color: #5a3d28;
   border: 1.5px solid #b59b75;
-  padding: 8px 18px; /* Reducido para que sea más compacto */
+  padding: 10px 20px; /* Ligeramente más grande para que sea cómodo de tocar con el dedo (touch target) */
   font-family: 'Times New Roman', serif;
-  font-size: 0.95rem; /* Letra un poco más pequeña */
+  font-size: 0.95rem;
   font-weight: bold;
   letter-spacing: 0.5px;
-  border-radius: 20px; /* Bordes redondeados más sutiles */
+  border-radius: 20px;
   cursor: pointer;
-  white-space: nowrap; /* Evita que el texto de "Sí, quiero" se baje de línea */
+  white-space: nowrap; 
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1), inset 0 1px 2px rgba(255, 255, 255, 0.5);
   transition: all 0.3s ease;
+  
+  /* Optimizaciones clave para móviles (S23) */
+  -webkit-tap-highlight-color: transparent; /* Quita el destello gris al tocar en Android */
+  touch-action: manipulation; /* Mejora la respuesta táctil rápida */
 }
 
 .btn-sello:hover {
@@ -114,6 +118,29 @@ body::before {
   border-color: #8c7352;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
   transform: translateY(-2px);
+}
+  .container-botones {
+position: absolute; bottom: 8%; left: 50%; transform: translateX(-50%); display: flex; gap: 30px; z-index: 10;
+  }
+
+/* Ajuste específico para pantallas de celulares (como el S23) */
+@media (max-width: 480px) {
+  .btn-sello {
+        font-size: 8px;
+        padding: 6px 10px;
+        width: auto;
+        max-width: 23%;
+        width: 100px;   /* Asegura que no rompa el contenedor si la pantalla es muy chica */
+  }
+  .container-botones {
+    position: absolute;
+    bottom: 8%;
+    left: 82%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 30px;
+    z-index: 10;
+  }
 }
 
 /* Estilo específico o variante si deseas diferenciar el botón "Sí" del "No" (opcional) */
