@@ -114,3 +114,8 @@ function irInicio() {
         btnMusica.style.borderColor = "#c5a059";
     }
 }
+document.addEventListener('DOMContentLoaded', function() {
+    var video = document.querySelector('.video-fondo');
+    // Ajusta este número: 1 es normal, 0.5 es la mitad de velocidad, 0.25 es muy lento
+    video.playbackRate = 0.4; 
+  });
