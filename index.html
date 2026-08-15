@@ -10,72 +10,92 @@
 </head>
 
 <body>
+
+<!-- Video de fondo con neblina -->
+  <video autoplay muted loop playsinline class="video-fondo">
+    <source src="video/fondo_humo.mp4" type="video/mp4">
+    Tu navegador no soporta videos de fondo.
+  </video>
+
+  <!-- Contenedor de Botones Flotantes (Música y Volver al inicio) -->
+  <div style="position: fixed; top: 20px; left: 20px; display: flex; flex-direction: column; gap: 10px; z-index: 1000;">
+      <!-- Botón flotante de Música ON / OFF -->
+      <button id="btnMusica" class="btn-musica">
+        🔇 Música: OFF
+      </button>
+
+      <!-- Nuevo Botón para volver a la página 1 -->
+      <button id="btnInicio" class="btn-musica" onclick="irInicio()">
+        📖 Ir a la Página 1
+      </button>
+  </div>
+
   <div class="flipbook">
     <!-- Tapa / Portada -->
-<!-- Tapa / Portada con estilo Edgar Allan Poe -->
-    <div class="hard" style="background: radial-gradient(circle, #1f1815 0%, #0d0a08 100%) !important; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; border: 2px solid #5a422d;">
-      <span style="font-size: 28px; margin-bottom: 10px;">🪶</span>
-      <h1 style="font-family: 'IM Fell English SC', serif; font-size: 32px; letter-spacing: 2px; color: #d8c7a7; margin-bottom: 10px;">Mors et Vita</h1>
-      <hr style="width: 50%; border: none; border-top: 1px solid #70583e; margin: 10px 0;">
-      <p style="font-family: 'Great Vibes', cursive; font-size: 24px; color: #c0a080; margin-top: 10px;">Una historia para ti...</p>
-      <small style="color: #bfa888; margin-top: 10px; font-style: italic;">~ Basado en los latidos del corazón</small>
+    <div class="hard" style="background-image: url('images/portada1.jpg'); background-size: 100% 100%; background-position: center; background-repeat: no-repeat;">
     </div>
     
     <!-- Contraportada interna -->
-<!-- Contraportada interna -->
-    <div class="hard" style="background: #14100e !important; border: 2px solid #5a422d; box-sizing: border-box;">
-      <div style="width: 100%; height: 100%; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; padding: 40px; box-sizing: border-box;">
-        <p style="font-family: 'IM Fell English SC', serif; font-size: 14px; line-height: 1.6; color: #bfa888; font-style: italic; margin-bottom: 15px;">"Los que sueñan de día son conscientes de muchas cosas que escapan a los que sueñan sólo de noche."</p>
-        <small style="color: #8c7355; font-style: italic; font-size: 12px;">- E. A. Poe</small>
-      </div>
+    <div class="hard" style="background-image: url('images/portada2.jpg'); background-size: 100% 100%; background-position: center; background-repeat: no-repeat;">
     </div>
 
-    <!-- Página 1 -->
-    <div class="page">
-      <h2>Prólogo</h2>
-      <p>Dos páginas en blanco que el destino decidió cruzar entre la tinta y la noche...</p>
-      <p class="texto-romantico">"El comienzo de nuestra historia"</p>
-      <div style="font-size: 30px;">✒️</div>
+    <div class="page" style="background-image: url('images/prologo.jpg'); background-size: 100% 100%; background-position: center; background-repeat: no-repeat;">
     </div>
 
     <!-- Página 2 (Foto) -->
-    <div class="page">
-      <h2>Capítulo I</h2>
-      <img src="https://picsum.photos/300/200" alt="Recuerdo" class="foto-poe" />
-      <p class="texto-romantico">Entre momentos inolvidables...</p>
-      <small>Cada instante a tu lado se convirtió en mi capítulo favorito.</small>
+    <div class="page" style="background-image: url('images/cap1_img1.jpg'); background-size: 100% 100%; background-position: center; background-repeat: no-repeat;">
+    </div>
+    <div class="page" style="background-image: url('images/cap1_img2.jpg'); background-size: 100% 100%; background-position: center; background-repeat: no-repeat;">
+    </div>
+   <div class="page" style="background-image: url('images/cap2_img1.jpg'); background-size: 100% 100%; background-position: center; background-repeat: no-repeat;">
+</div>
+       <div class="page" style="background-image: url('images/cap2_2.png'); background-size: 100% 100%; background-position: center; background-repeat: no-repeat;">
+  </div>
+       <div class="page" style="background-image: url('images/cap3_img1.jpg'); background-size: 100% 100%; background-position: center; background-repeat: no-repeat;">
+    </div>
+          <div class="page" style="background-image: url('images/cap3_img2.jpg'); background-size: 100% 100%; background-position: center; background-repeat: no-repeat;">
+    </div>
+    <div class="page" style="background-image: url('images/cap4_1.png'); background-size: 100% 100%; background-position: center; background-repeat: no-repeat;">
+    </div>
+    <div class="page" style="background-image: url('images/cap4_2.png'); background-size: 100% 100%; background-position: center; background-repeat: no-repeat;">
+    
+    </div>
+        <div class="page" style="background-image: url('images/cap5_1.jpg'); background-size: 100% 100%; background-position: center; background-repeat: no-repeat;">
+    
     </div>
 
-    <!-- Página 3 (La gran pregunta) -->
-    <div class="page">
-      <h2>El Desenlace</h2>
-      <p class="texto-romantico">¿Quieres ser la protagonista de mi historia?</p>
-      <p><b>¿Quieres estar conmigo?</b></p>
-      <div class="botones-pregunta">
-        <button class="btn-sello" onclick="aceptar()">Sí, quiero</button>
-        <button class="btn-sello" id="btn-no" onmouseover="moverNo()" onclick="moverNo()">No</button>
-      </div>
+<div class="page" style="position: relative; height: 100vh; width: 100%; background-image: url('images/cap5_2.jpg'); background-size: 100% 100%; background-position: center; background-repeat: no-repeat;">
+  <div class="botones-pregunta" style="position: absolute; bottom: 8%; left: 50%; transform: translateX(-50%); display: flex; gap: 30px; z-index: 10;">
+    <button class="btn-sello" onclick="aceptar()">Sí, quiero</button>
+    <button class="btn-sello" id="btn-no" onmouseover="moverNo()" onclick="moverNo()">No</button>
+  </div>
+</div>
+        <div class="page" style="background-image: url('images/fondo_izq.jpg'); background-size: 100% 100%; background-position: center; background-repeat: no-repeat;">
+    
     </div>
 
-    <!-- Página 4 (Celebración) -->
-    <div class="page" id="pagina-final">
-      <h2>Fin del Capítulo</h2>
-      <div style="font-size: 40px; margin-bottom: 5px;">🌹</div>
-      <p class="texto-romantico">¡Nuestra historia apenas comienza!</p>
-      <small>Gracias por decir que sí. Me haces muy feliz.</small>
+        <div class="page" style="background-image: url('images/cap6.jpg'); background-size: 100% 100%; background-position: center; background-repeat: no-repeat;">
+    
     </div>
 
     <!-- Contraportada final interna -->
-    <div class="hard"></div>
+        <div class="page" style="background-image: url('images/cap7.jpg'); background-size: 100% 100%; background-position: center; background-repeat: no-repeat;">
+    
+    </div>
     
     <!-- Contraportada final externa -->
-    <div class="hard">Fin <small>~ Te amo ❤️</small></div>
+    <div class="hard" style="background-image: url('images/portada2.jpg'); background-size: 100% 100%; background-position: center; background-repeat: no-repeat;">
+    </div>
+  <div class="hard" style="background-image: url('images/final_fondo.jpg'); background-size: 100% 100%; background-position: center; background-repeat: no-repeat;">
+    </div>
   </div>
-
-  <!-- Scripts esenciales de Turn.js -->
+  <!-- Quitamos el autoplay directo para evitar errores -->
+  <audio id="audioPlayer" src="music/Bacilos.mp3" loop></audio>
+<audio id="soundPage" src="music/turn.mp3" preload="auto"></audio>
+  <!-- Scripts esenciales -->
   <script src="jquery.js"></script>
   <script src="turn.js"></script>
-    <script src="index.js"></script>
+  <script src="index.js"></script>
 
 </body>
 
